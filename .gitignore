@@ -106,4 +106,4 @@ venv.bak/
 # nikola
 /output
 /cache
-.doit.db.*
+.doit.db
