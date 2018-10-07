@@ -11,8 +11,8 @@ $light: #d6dce6;
 
 $font-family-sans-serif: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default; //BS
 
-@import '../../../node_modules/bootstrap/scss/bootstrap';
-@import '../../../scss/common-utils';
+@import 'bootstrap';
+@import 'hackerthemes-common-utils';
 
 .display-1,
 .display-2,

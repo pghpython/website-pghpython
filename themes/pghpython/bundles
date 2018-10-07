@@ -1,6 +1,6 @@
 ; css bundles
 assets/css/all-nocdn.css=
-    bootstrap4-wizardy.css,
+    bootstrap4-wizardry.css,
     rst_base.css,
     nikola_rst.css,
     code.css,
