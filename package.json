@@ -1,9 +1,9 @@
 {
-  "name": "website-systema",
+  "name": "website-pghpython",
   "version": "0.0.1",
-  "description": "website-systema",
+  "description": "website-pghpython",
   "main": "index.js",
-  "repository": "https://github.com/systemadev/website-systema",
+  "repository": "https://github.com/pghpython/website-pghpython",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
