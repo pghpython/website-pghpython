@@ -1,35 +1,39 @@
-$(function(){
+$(function() {
+    var menu = document.getElementById('menu'),
+        WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange':'resize';
 
-    var layout   = document.getElementById('layout'),
-        menu     = document.getElementById('menu'),
-        menuLink = document.getElementById('menuLink');
-
-    function toggleClass(element, className) {
-        var classes = element.className.split(/\s+/),
-            length = classes.length,
-            i = 0;
-
-        for(; i < length; i++) {
-          if (classes[i] === className) {
-            classes.splice(i, 1);
-            break;
+    function toggleHorizontal() {
+      [].forEach.call(
+          document.getElementById('menu').querySelectorAll('.navbar-can-transform'),
+          function(el){
+              el.classList.toggle('pure-menu-horizontal');
           }
-        }
-        // The className is not found
-        if (length === classes.length) {
-            classes.push(className);
-        }
-
-        element.className = classes.join(' ');
-    }
-
-    menuLink.onclick = function (e) {
-        var active = 'active';
-
-        e.preventDefault();
-        toggleClass(layout, active);
-        toggleClass(menu, active);
-        toggleClass(menuLink, active);
+      );
     };
 
+    function toggleMenu() {
+      // set timeout so that the panel has a chance to roll up
+      // before the menu switches states
+      if (menu.classList.contains('open')) {
+          setTimeout(toggleHorizontal, 500);
+      }
+      else {
+          toggleHorizontal();
+      }
+      menu.classList.toggle('open');
+      document.getElementById('toggle').classList.toggle('x');
+    };
+
+    function closeMenu() {
+      if (menu.classList.contains('open')) {
+          toggleMenu();
+      };
+    };
+
+    document.getElementById('toggle').addEventListener('click', function (e) {
+      toggleMenu();
+      e.preventDefault();
+    });
+
+    window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
 });

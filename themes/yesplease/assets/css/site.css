@@ -22,9 +22,6 @@ html{
   box-sizing: inherit;
 }
 
-.menu-link{
-    box-sizing: content-box;
-}
 
 /* Make content section extend to bottom to place footer at bottom of window. */
 
