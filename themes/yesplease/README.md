@@ -1,8 +1,3 @@
-This theme (particularly the side-menu) is based on an 
-[example layout](http://purecss.io/layouts/side-menu/) from PureCSS. 
-It features a sidemenu that collapses into a hamburger on small screens
-and a single column for posts. 
-
 Posts may include a header image on which the title is overlaid. The
 image will be darkened and blurred to provide contrast to the title. The 
 photo is set by including a header-image directive to the top of the post.
